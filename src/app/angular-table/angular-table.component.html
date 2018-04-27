@@ -1,0 +1,21 @@
+<blockquote>Please click on a row</blockquote>
+<p class="text-danger">You clicked on: <strong>{{ message }}</strong></p>
+<br />
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.Email }}</td>
+        <td>{{ person.Password }}</td>
+        <td>{{ person.language }}</td>
+      </tr>
+    </tbody>
+    </table>

@@ -1,0 +1,35 @@
+
+<form [formGroup]="myform"> 
+	<div class="form-group">
+		<label>Email</label>
+		<input type="email"
+		       class="form-control"
+		       formControlName="Email" 
+		       required>
+	</div>
+
+	<div class="form-group">
+		<label>Password</label>
+		<input type="password"
+		       class="form-control"
+		       formControlName="Password" 
+		       required>
+	</div>
+
+	<div class="form-group">
+		<label>Language</label>s
+		<select class="form-control"
+		        formControlName="language">
+			<option value="">Please select a language</option>
+			<option *ngFor="let lang of langs"
+			        [value]="lang">{{lang}}
+			</option>
+		</select>
+  </div>
+  <div align="center">
+  <button  class="btn btn-primary" (click)="register()">Register</button>
+ </div>
+	<pre>{{myform.value | json}}</pre>
+	<pre>{{errMessage |json}}</pre>
+<ng-progress></ng-progress>
+</form>
