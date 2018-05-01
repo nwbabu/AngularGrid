@@ -27,6 +27,10 @@ export class MenuComponent implements OnInit {
  }
  getTableComponent()
  {
-   this.route.navigate(['AngTable'])
+   this.route.navigate(['AngTable']);
+ }
+ getTablecomMat()
+ {
+   this.route.navigate(['AngMatTable']);
  }
 }

@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,9 @@ import {AgGridModule} from "ag-grid-angular/main";
 import { RedComponentComponent } from './red-component/red-component.component'
 import { DataTablesModule } from 'angular-datatables';
 import { AngularTableComponent } from './angular-table/angular-table.component';
+import { MaterialTableComponent } from './material-table/material-table.component';
+import {DataTableModule} from 'primeng/datatable';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -40,6 +44,10 @@ const routes: Routes = [
   {
     path: 'AngTable',
     component:AngularTableComponent
+  },
+  {
+    path: 'AngMatTable',
+    component:MaterialTableComponent
   }
  
 ];
@@ -54,6 +62,7 @@ const routes: Routes = [
     UserInfoComponent,
     RedComponentComponent,
     AngularTableComponent,
+    MaterialTableComponent,
     
   ],
   imports: [
@@ -63,6 +72,8 @@ const routes: Routes = [
     HttpClientModule,
     NgProgressModule,
     DataTablesModule,
+    DataTableModule,
+    BrowserAnimationsModule,
     AgGridModule.withComponents(
       [RedComponentComponent]),
     RouterModule.forRoot(routes),

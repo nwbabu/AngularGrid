@@ -2,13 +2,8 @@ import { Component, OnInit,NgZone } from '@angular/core';
 import {HttpClientModule, HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {ObservableServiceService} from '../observable-service.service';
 import { Subject } from 'rxjs/Subject';
+import {Person} from '../Person';
 
-class Person {
-  id: number;
-  Email: string;
-  Password: string;
-  language:string;
-}
 @Component({
   selector: 'app-angular-table',
   templateUrl: './angular-table.component.html',
